@@ -1,13 +1,22 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>Applied Statistics Simulator</title>
+    <title>Sample Simulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Applied Stat Project</h2>
+    <h2>Sample Simulator</h2>
 
-    Values of your sample: (with ,): <br><input id="values" value="1.1, 2.2, 3.4" style="width:300px;"><br><br>
+    Values of your sample (with ,): <br><input id="values" value="1.1, 1.15, 3.2, 10.2, 2.2, 3.4" style="width:300px;"><br>
+    Your value to find z score: <br><input id="zscore" value=""><br><br>
 
-    <h3>Results</h3>
-    <p id="results"></p>
+    <button onclick="calculateStats()">Calculate results</button>
+
+    <div class="results">
+        <h3>Results</h3>
+        <p id="results"></p>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+</html>

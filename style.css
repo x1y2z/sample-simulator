@@ -5,6 +5,10 @@ h1{
     text-align:center;
 }
 
+.results {
+    width: 220px;
+}
+
 .info-container{
     width:350px;
 
