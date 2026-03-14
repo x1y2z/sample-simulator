@@ -98,6 +98,11 @@ function sortArray(array)
     return array 
 }
 
+function getCoefficientOfVariation(mean, sd)
+{
+    return (sd/mean).toFixed(3)
+}
+
 function calculateStats() {
     let sum = 0
 
@@ -126,6 +131,8 @@ function calculateStats() {
     if(zscore!="")
         zscoreValue = calculateZScore(zscore, mean, standardDeviation)
 
+    let cv = getCoefficientOfVariation(mean, standardDeviation)
+
     document.getElementById("results").innerHTML = 
         "Values sorted: " + sortArray(values) +  
         "<br>" + "Mean: " + mean.toFixed(2) + 
@@ -135,5 +142,6 @@ function calculateStats() {
         "<br>" + "Variance: " + variance.toFixed(2) +
         "<br>" + "Standard Deviation: " + standardDeviation + 
         "<br>" + "Interquartile Range: " + getInterquartileRange(values) + 
-        "<br>" + "Z Score: " + zscoreValue
+        "<br>" + "Z Score: " + zscoreValue + 
+        "<br>" + "Coefficient Of Variation: " + cv
 }
