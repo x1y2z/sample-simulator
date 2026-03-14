@@ -1,0 +1,14 @@
+body {
+    font-family:Arial;
+}
+h1{
+    text-align:center;
+}
+
+.info-container{
+    width:350px;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
