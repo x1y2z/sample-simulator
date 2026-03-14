@@ -92,6 +92,12 @@ function calculateZScore(value, mean, sd)
     return score.toFixed(4)
 }
 
+function sortArray(array)
+{
+    array.sort((a, b) => a - b);
+    return array 
+}
+
 function calculateStats() {
     let sum = 0
 
@@ -121,7 +127,8 @@ function calculateStats() {
         zscoreValue = calculateZScore(zscore, mean, standardDeviation)
 
     document.getElementById("results").innerHTML = 
-        "Mean: " + mean.toFixed(2) + 
+        "Values sorted: " + sortArray(values) +  
+        "<br>" + "Mean: " + mean.toFixed(2) + 
         "<br>" + "Median: " + median + 
         "<br>" + "Range: " + range + 
         "<br>" + "Mode: " + mode +
